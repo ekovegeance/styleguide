@@ -91,6 +91,12 @@ const user_card = (props) => {
 - Prefer single quotes `'` over double quotes `"` in JavaScript/TypeScript.
 - Limit JSX lines to **80-120 characters**.
 
+***Auto format using Laravel Pint*** [learn more](https://laravel.com/docs/11.x/pint)
+
+```bash
+./vendor/bin/pint --repair
+```
+
 ---
 
 ## Blade Templates
