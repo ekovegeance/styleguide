@@ -45,6 +45,7 @@ resources/
 routes/
   web.php
   api.php
+  auth.php
 ```
 
 ---
