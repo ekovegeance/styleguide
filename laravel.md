@@ -38,6 +38,7 @@ app/
 resources/
   js/
     components/
+      ui/
     layouts/
     pages/
     utils/
