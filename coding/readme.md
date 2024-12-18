@@ -1,1 +1,2 @@
 - Laravel (Inertia, React, Typescript)
+- Next.js (App Router, Typescript)
