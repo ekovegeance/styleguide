@@ -31,11 +31,11 @@ Follow these steps to start using the style guides:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-org>/<your-repo>.git
+   https://github.com/ekovegeance/styleguide.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd <your-repo>
+   cd styleguide
    ```
 3. Explore the style guides in the respective folders:
    - `coding/` for coding standards
