@@ -99,7 +99,7 @@ const user_card = (props) => {
 
 ### Example
 `resources/views/app.blade.php`
-```blade
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
