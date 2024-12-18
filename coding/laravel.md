@@ -12,7 +12,7 @@
 9. [React and TypeScript](#react-and-typescript)
 10. [Testing](#testing)
 11. [Best Practices](#best-practices)
-12. [Recommend Tools & Configuration ](#recommend-tools)
+12. [Recommend Tools & Configuration ](#recommend-tools--configuration)
 
 ---
 
@@ -253,3 +253,5 @@ test('renders counter', () => {
 ---
 
 ## Recommend Tools & Configuration
+- [Awesomecode](https://github.com/ekovegeance/awesomecode)
+- [Laravel Herd](https://herd.laravel.com/) PHP development environment.
