@@ -98,7 +98,7 @@ const user_card = (props) => {
 - Keep Blade templates minimal and delegate logic to React components.
 
 ### Example
-```blade
+```php
 {{-- resources/views/app.blade.php --}}
 <!DOCTYPE html>
 <html lang="en">
