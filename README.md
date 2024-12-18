@@ -14,8 +14,8 @@ The purpose of these style guides is to:
 ## Features
 
 - **Coding Standards**
+  - [PHP (Laravel, Inertia)](https://github.com/ekovegeance/styleguide/blob/main/coding/laravel.md)
   - JavaScript/TypeScript (React JS, Next.js)
-  - PHP (Laravel, Inertia)
 - **Design Guidelines**
   - Atomic Design principles
   - Accessibility standards
