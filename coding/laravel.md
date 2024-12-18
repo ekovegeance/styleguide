@@ -28,7 +28,7 @@
 - Place frontend code in the `resources/js` folder.
 - Use domain-driven or feature-based folder structures for React components.
 
-### Example Structure
+#### Example Structure
 ```
 app/
   Models/
@@ -64,7 +64,7 @@ routes/
 - Use **kebab-case** for file and folder names.
 - Use descriptive names for props and state variables.
 
-### Examples
+#### Examples
 ```typescript
 // Good (React)
 const UserCard: React.FC<{ userName: string }> = ({ userName }) => {
@@ -103,7 +103,7 @@ const user_card = (props) => {
 - Use Blade only for initializing Inertia and managing layouts.
 - Keep Blade templates minimal and delegate logic to React components.
 
-### Example
+#### Example
 `resources/views/app.blade.php`
 ```php
 <!DOCTYPE html>
@@ -125,7 +125,7 @@ const user_card = (props) => {
 - Avoid querying in React components; use controllers to fetch data.
 - Use `fillable` or `guarded` attributes to prevent mass assignment vulnerabilities.
 
-### Example
+#### Example
 ```php
 class User extends Model {
     protected $fillable = ['name', 'email'];
@@ -143,7 +143,7 @@ class User extends Model {
 - Return Inertia responses for rendering React pages.
 - Use dependency injection to pass services and repositories.
 
-### Example
+#### Example
 ```php
 public function index(Request $request) {
     $users = User::paginate(10);
@@ -161,7 +161,7 @@ public function index(Request $request) {
 - Use route names for URLs instead of hardcoding paths.
 - Group related routes using `Route::group` and middleware.
 
-### Example
+#### Example
 ```php
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -185,7 +185,7 @@ Route::middleware(['auth'])->group(function () {
 - Prefer React Context or Zustand for global state.
 - Avoid prop drilling by using context or state libraries.
 
-### Examples
+#### Examples
 ```typescript
 // Custom Hook
 import { useState } from 'react';
@@ -216,7 +216,7 @@ const Counter: React.FC = () => {
 - Use factories for creating test data in Laravel.
 - Test Inertia responses to ensure proper integration.
 
-### Example
+#### Example
 ```php
 // PHPUnit Test
 public function test_dashboard_access() {
