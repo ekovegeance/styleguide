@@ -14,10 +14,8 @@ The purpose of these style guides is to:
 ## Features
 
 - **Coding Standards**
-  - JavaScript/TypeScript
-  - PHP
-  - Python
-  - HTML/CSS
+  - JavaScript/TypeScript (React JS, Next.js)
+  - PHP (Laravel, Inertia)
 - **Design Guidelines**
   - Atomic Design principles
   - Accessibility standards
