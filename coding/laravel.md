@@ -146,13 +146,16 @@ class User extends Model {
 
 #### Example
 ```php
-public function index(Request $request) {
-    $users = User::paginate(10);
-
-    return Inertia::render('Users/Index', [
-        'users' => $users,
-    ]);
-}
+    /**
+     * Display the user's Account form.
+     */
+    public function edit(Request $request): Response
+    {
+        return Inertia::render('account/edit', [
+            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
+            'status' => session('status'),
+        ]);
+    }
 ```
 
 ---
@@ -164,8 +167,11 @@ public function index(Request $request) {
 
 #### Example
 ```php
-Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// Account
+Route::middleware('auth')->group(function () {
+    Route::get('/account', [AccountController::class, 'edit'])->name('account.edit');
+    Route::patch('/account', [AccountController::class, 'update'])->name('account.update');
+    Route::delete('/account', [AccountController::class, 'destroy'])->name('account.destroy');
 });
 ```
 
@@ -217,18 +223,30 @@ const Counter: React.FC = () => {
 - Use factories for creating test data in Laravel.
 - Test Inertia responses to ensure proper integration.
 
+
 #### Example
+for Backend [learn more](https://laravel.com/docs/11.x/testing)
+```bash
+php artisan make:test AccountTest
+```
 ```php
 // PHPUnit Test
-public function test_dashboard_access() {
-    $user = User::factory()->create();
+    public function test_account_page_is_displayed(): void
+    {
+        $user = User::factory()->create();
 
-    $response = $this->actingAs($user)->get('/dashboard');
+        $response = $this
+            ->actingAs($user)
+            ->get('/account');
 
-    $response->assertStatus(200);
-}
+        $response->assertOk();
+    }
+```
+```bash
+php artisan test
 ```
 
+for Frontend
 ```typescript
 // Jest Test
 import { render, screen } from '@testing-library/react';
@@ -253,5 +271,6 @@ test('renders counter', () => {
 ---
 
 ## Recommend Tools & Configuration
-- [Awesomecode](https://github.com/ekovegeance/awesomecode)
+- [Awesomecode](https://github.com/ekovegeance/awesomecode) VS Code Setup
 - [Laravel Herd](https://herd.laravel.com/) PHP development environment.
+- VS Code extension [Official Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel), [Laravel Pack](https://marketplace.visualstudio.com/items?itemName=mattedesign.laravel-pack), [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
