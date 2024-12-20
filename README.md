@@ -20,8 +20,8 @@ The purpose of these style guides is to:
   - Atomic Design principles
   - Accessibility standards
 - **Documentation Rules**
-  - Markdown formatting
-  - Commenting practices
+  - [Markdown formatting](https://ekovegeance.github.io/styleguide/documentation/markdown)
+  - [Commenting practices](https://ekovegeance.github.io/styleguide/documentation/comments)
 
 ## Getting Started
 
