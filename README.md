@@ -18,7 +18,7 @@ The purpose of these style guides is to:
   - JavaScript/TypeScript (React JS, Next.js)
 - **Design Guidelines**
   - [Atomic Design principles](https://ekovegeance.github.io/styleguide/design/atomic)
-  - Accessibility standards
+  - [Accessibility standards](https://ekovegeance.github.io/styleguide/design/accessibility)
 - **Documentation Rules**
   - [Markdown formatting](https://ekovegeance.github.io/styleguide/documentation/markdown)
   - [Commenting practices](https://ekovegeance.github.io/styleguide/documentation/comments)
