@@ -14,14 +14,16 @@ The purpose of these style guides is to:
 ## Features
 
 - **Coding Standards**
-  - [PHP (Laravel, Inertia)](https://ekovegeance.github.io/styleguide/coding/laravel)
-  - JavaScript/TypeScript (React JS, Next.js)
+  - [Laravel, Inertia (React Typescript)](https://ekovegeance.github.io/styleguide/coding/laravel)
+  - [Next.Js App Router (Typescript)](https://github.com/ekovegeance/styleguide/blob/main/coding/nextjs.md)
 - **Design Guidelines**
   - [Atomic Design principles](https://ekovegeance.github.io/styleguide/design/atomic)
   - [Accessibility standards](https://ekovegeance.github.io/styleguide/design/accessibility)
 - **Documentation Rules**
   - [Markdown formatting](https://ekovegeance.github.io/styleguide/documentation/markdown)
   - [Commenting practices](https://ekovegeance.github.io/styleguide/documentation/comments)
+  - [Conventional Commit](https://github.com/ekovegeance/styleguide/blob/main/documentation/commit.md)
+  - [Semantic Versioning](https://github.com/ekovegeance/styleguide/blob/main/documentation/versioning.md)
 
 ## Getting Started
 
