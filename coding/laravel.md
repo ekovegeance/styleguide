@@ -66,11 +66,21 @@ routes/
 - Use descriptive names for props and state variables.
 
 #### Examples
-```typescript
+```tsx
 // Good (React)
-const UserCard: React.FC<{ userName: string }> = ({ userName }) => {
-  return <div>{userName}</div>;
-};
+interface LoginProps {
+status?: string;
+canResetPassword: boolean;
+  
+}
+
+export default fanction LoginForm({status, canResetPassword}: LoginProps){
+
+return (
+  <div>LoginForm</div>
+
+ )
+}
 
 // Bad
 const user_card = (props) => {
