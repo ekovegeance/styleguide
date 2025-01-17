@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [General Principles](#general-principles)
-2. [Project Structure](#project-structure)
+2. [Folder and File Structure](#folder-and-file-structure)
 3. [File Naming](#file-naming)
 4. [Imports](#imports)
 5. [React Components](#react-components)
@@ -20,7 +20,7 @@
 
 ---
 
-## Project Structure
+## Folder and File Structure
 
 ```
 app/        # App Router pages
