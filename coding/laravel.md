@@ -214,7 +214,7 @@ function useCounter(initialValue: number) {
 }
 
 // Component
-const Counter: React.FC = () => {
+export default function Counter(){
   const { count, increment } = useCounter(0);
 
   return (
