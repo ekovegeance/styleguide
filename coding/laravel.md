@@ -27,7 +27,7 @@
 ## Folder and File Structure
 - Organize backend code into appropriate folders (`Models`, `Controllers`, `Services`, `Jobs`, etc.).
 - Place frontend code in the `resources/js` folder.
-- Use domain-driven or feature-based folder structures for React components.
+- Use [Atomic Design](https://ekovegeance.github.io/styleguide/design/atomic) or feature-based folder structures for React components.
 
 #### Example Structure
 ```
