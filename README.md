@@ -15,7 +15,7 @@ The purpose of these style guides is to:
 
 - **Coding Standards**
   - [Laravel, Inertia (React Typescript)](https://ekovegeance.github.io/styleguide/coding/laravel)
-  - [Next.Js App Router (Typescript)](https://ekovegeance.github.io/styleguide/blob/main/coding/nextjs)
+  - [Next.Js App Router (Typescript)](https://ekovegeance.github.io/styleguide/coding/nextjs)
 - **Design Guidelines**
   - [Atomic Design principles](https://ekovegeance.github.io/styleguide/design/atomic)
   - [Accessibility standards](https://ekovegeance.github.io/styleguide/design/accessibility)
