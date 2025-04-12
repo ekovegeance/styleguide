@@ -1,4 +1,4 @@
-# Next.js App Router React TypeScript Style Guide
+# Next.js App Router (React, TypeScript) Style Guide
 
 ## Table of Contents
 
