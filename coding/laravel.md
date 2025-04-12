@@ -1,4 +1,4 @@
-# Laravel Inertia React TypeScript Coding Style Guide
+# Laravel (Inertia, React, TypeScript) Coding Style Guide
 
 ## Table of Contents
 1. [General Principles](#general-principles)
