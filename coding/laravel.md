@@ -102,7 +102,7 @@ const user_card = (props) => {
 - Prefer single quotes `'` over double quotes `"` in JavaScript/TypeScript.
 - Limit JSX lines to **80-120 characters**.
 
-***Auto format using Laravel Pint*** [learn more](https://laravel.com/docs/11.x/pint)
+***Auto format using Laravel Pint*** [learn more](https://laravel.com/docs/pint)
 
 ```bash
 ./vendor/bin/pint --repair
@@ -235,7 +235,7 @@ export default function Counter(){
 
 
 #### Example
-for Backend [learn more](https://laravel.com/docs/11.x/testing)
+for Backend [learn more](https://laravel.com/docs/testing)
 ```bash
 php artisan make:test AccountTest
 ```
@@ -281,6 +281,6 @@ test('renders counter', () => {
 ---
 
 ## Recommend Tools & Configuration
-- [Awesomecode](https://github.com/ekovegeance/awesomecode) VS Code Setup
+- [Awesomecode](https://marketplace.visualstudio.com/items?itemName=ekovegeance.awesomecode) theme and code editor setup for VS Code
 - [Laravel Herd](https://herd.laravel.com/) PHP development environment.
 - VS Code extension [Official Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel), [Laravel Pack](https://marketplace.visualstudio.com/items?itemName=mattedesign.laravel-pack), [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
