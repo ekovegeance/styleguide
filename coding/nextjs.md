@@ -11,7 +11,6 @@
 7. [Styling](#styling)
 8. [Testing](#testing)
 9. [Linting and Formatting](#linting-and-formatting)
-10. [Version Control](#version-control)
 
 ---
 
@@ -21,6 +20,7 @@
 ---
 
 ## Folder and File Structure
+- Follow [Next JS Project Structure](https://nextjs.org/docs/app/getting-started/project-structure)
 
 ```
 app/        # App Router pages
@@ -39,16 +39,15 @@ config/     # Configuration files
 
 ## File Naming
 
-- Use **camelCase** for utility, hooks, or helper files.
-- Use **kebab-case** for React component files.
+- Use **kebab-case** for React component files, utility, hooks, or helper files.
 
 Examples:
 ```
 app/home/page.tsx
 components/ui/button.tsx
 components/login-form.tsx
-hooks/useFetch.ts
-lib/formatDate.ts
+hooks/use-fetch.ts
+lib/format-date.ts
 ```
 
 ---
@@ -64,7 +63,7 @@ import { format } from 'date-fns';
 
 // Internal components and helpers
 import NavBar from '@/components/navbar';
-import { formatDate } from '@/lib/formatDate';
+import { formatDate } from '@/lib/format-date';
 ```
 
 ---
@@ -99,13 +98,32 @@ return (
 ```json
 {
   "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "strict": true,
-    "baseUrl": "src",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./*"]
     }
-  }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
+
 ```
 
 - Avoid using `any`. Always use specific types.
@@ -186,27 +204,29 @@ test('renders Button with label', () => {
 
 ## Linting and Formatting
 
-- Use ESLint with the following configuration in `.eslintrc.js`:
+- Use ESLint with the following configuration in `eslint.config.mjs`:
 
 ```js
-module.exports = {
-  root: true,
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  extends: ['next/core-web-vitals', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': ['error'],
-    'react/react-in-jsx-scope': 'off',
-  },
-};
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+];
+
+export default eslintConfig;
+
 ```
 
-- Use Prettier with the following configuration in `.prettierrc`:
+- Use Prettier with the following configuration in `.prettierrc` optional:
 
 ```json
 {
