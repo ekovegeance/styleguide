@@ -3,12 +3,12 @@
 ```
 my-app/
 ├── 📁 app                  # Next.js app directory (routes, pages)
-│   ├── 📁 (auth)           # Auth routes (login, register)
-│   │   ├── 📁 login
-│   │   │   └── 📄 page.tsx           # Login page
-│   │   └── 📁 register
-│   │       └── 📄 page.tsx           # Register page
-│   ├── 📁 (dashboard)      # Protected routes (requires login)
+│   ├── 📁 (auth)           # Auth routes (signin, signup)
+│   │   ├── 📁 signin
+│   │   │   └── 📄 page.tsx   # Signin page
+│   │   └── 📁 signup
+│   │       └── 📄 page.tsx   # Signup page
+│   ├── 📁 (dashboard)      # Protected routes (requires signin)
 │   │   └── 📄 page.tsx
 │   ├── 📄 layout.tsx       # Root layout
 │   └── 📄 page.tsx         # Home page
@@ -23,28 +23,30 @@ my-app/
 │   └── 📄 etc.
 │
 ├── 📁 lib                  # Server-side logic, shared libraries
-│   ├── 📁 api              # ✅ DAL - Data Access Layer
-│   │   ├── 📄 auth.ts      # Fetch login/register
-│   │   └── 📄 product.ts   # Fetch product list
 │   ├── 📁 auth             # Auth helpers (session, guards)
 │   │   ├── 📄 session.ts
 │   │   └── 📄 guard.ts
+│   │
+│   ├── 📁 data              # ✅ DAL - Data Access Layer
+│   │   ├── 📄 auth.ts      # Fetch signin/signup
+│   │   └── 📄 product.ts   # Fetch product list
+│   │
+│   ├── 📁 definitions      #  Schemas validation
+│   │   ├── 📄 auth.ts      
+│   │   └── 📄 product.ts   
+│   │
+│   ├── 📁 dto                  # ✅ DTO - Data Transfer Objects
+│   │   ├── 📄 sign-in.dto.ts
+│   │   └── 📄 register.dto.ts
+│   │
 │   └── 📁 utils            # Helper utilities (e.g., formatters)
 │       └── 📄 formatter.ts
 │
-├── 📁 dto                  # ✅ DTO - Data Transfer Objects
-│   ├── 📄 sign-in.dto.ts
-│   ├── 📄 register.dto.ts
-│   └── 📄 product.dto.ts
-│
-├── 📁 types                # Global types and interfaces
-│   ├── 📄 user.ts
-│   ├── 📄 product.ts
-│   └── 📄 response.ts
 │
 ├── 📁 components           # Reusable UI components
-│   ├── 📁 form
-│   │   └── 📄 login-form.tsx
+│   ├── 📁 auth
+│   │   └── 📄 signup-form.tsx
+│   │   └── 📄 signin-form.tsx
 │   ├── 📁 product
 │   │   ├── 📄 product-list.tsx
 │   │   └── 📄 product-card.tsx
@@ -56,9 +58,12 @@ my-app/
 ├── 📁 layouts
 │       └── 📄 app-layout.tsx
 │       └── 📄 auth-layout.tsx
+│       └── 📄 etc.
 │
-├── 📁 constants            # Static constants (route names, config)
-│   └── 📄 routes.ts
+├── 📁 types                # Global types and interfaces
+│   ├── 📄 user.ts
+│   ├── 📄 product.ts
+│   └── 📄 response.ts
 │
 ├── 📄 middleware.ts        # Middleware for auth/routing
 ├── 📁 public               # Static assets (images, icons, etc)
@@ -70,7 +75,7 @@ my-app/
 
 ## 📌 Note
 
-- **DAL (`lib/api/`)**: All the logic to fetch to backend/API
-- **DTO (`dto/`)**: Data input/output scheme from form or API
+- **DAL (`lib/data/`)**: All the logic to fetch to database/API
+- **DTO (`lib/dto/`)**: Data input/output scheme from form or API
 - **Server Actions (`app/actions/`)**: Process forms or actions directly from the client
-- **Komponen UI (`components/`)**: Arranged by domain/function
+- **Component UI (`components/`)**: Arranged by domain/function
